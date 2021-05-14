@@ -1,0 +1,13 @@
+{% extends "elayout.html" %}
+
+{% block body %}
+    <h1 class="text-center p-3">Tasks</h1>
+    <ul class="list-group list-group-flush">
+        {% if not todos %}
+            <p class="text-center p-3">You have no tasks</p>
+        {% endif %}
+        {% for todo in todos %}
+        <li class="list-group-item">{{ todo }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

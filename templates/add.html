@@ -1,0 +1,26 @@
+{% extends "elayout.html" %}
+
+{% block body %}
+    <h1 class="text-center p-3">Insert a new Task</h1>
+    <form action="/add" method="post" class="text-center">
+        <div class="p-3">
+            <input id="task" name="task" type="text" placeholder="Task name">
+        </div>
+        <div class="p-3">
+            <input class="btn btn-primary" id="submit" type="submit" disabled>
+        </div>
+    </form>
+    <script>
+        document.querySelector("#task").onkeyup = function()
+        {
+            if (document.querySelector("#task").value === '')
+            {
+                document.querySelector("#submit").disabled = true;
+            }
+            else
+            {
+                document.querySelector("#submit").disabled = false;
+            }
+        }
+    </script>
+{% endblock %}

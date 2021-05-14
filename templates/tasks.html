@@ -1,0 +1,12 @@
+{% extends "elayout.html" %}
+
+{% block body %}
+    <h1 class="text-center p-3">Tasks</h1>
+    <ul>
+        {% for todo in todos %}
+        <li>{{ todo }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/add">Create a new task</a>
+{% endblock %}
