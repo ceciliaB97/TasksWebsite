@@ -1,6 +1,11 @@
+import sys
 import random
 from flask import Flask, redirect, render_template, request, session
 from flask_session import Session
+
+
+print(sys.version)
+print(sys.executable)
 
 app = Flask(__name__)
 app.config["SESSIONS_PERMANENT"] = False
